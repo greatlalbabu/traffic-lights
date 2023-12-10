@@ -1,0 +1,207 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+   
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.box{
+    height: 20%;
+    width: 20%;
+    background-color: aqua;
+    /* margin: 1rem; */
+   transition-property: all;
+   transition-duration: 10s;
+   animation-name: change;
+   animation-duration: 5s;
+   animation-iteration-count: 10;
+}
+
+@keyframes change {
+    0%{
+        width: 40%;
+
+    }
+  50%{
+    width: 60%;
+
+  }
+
+  100%{
+    width: 100%;
+  }
+
+    
+}
+
+/* .box1, .box2, .box3{
+    height: 30%;
+    width: 50%;
+    background-color: aqua;
+    margin: 2rem;
+
+} */
+
+/* .box:first-child{
+    transition-delay: 1s;
+}
+.box:nth-child(2){
+    transition-duration: 5ms;
+} */
+
+.box:nth-child(1){
+    /* transition-timing-function: ease; */
+    
+}
+.box:nth-child(2){
+    /* transition-timing-function: ease-in; */
+    
+}
+.box:nth-child(3){
+    /* transition-timing-function: ease-out; */
+    
+}
+.box:nth-child(4){
+    /* transition-timing-function: linear; */
+    
+}
+.box:nth-child(5){
+    /* transition-timing-function: 
+    cubic-bezier(.17,.67,1,1.61); */
+    
+}
+/* 
+.container:hover .box{
+    background-color: yellow;
+    width: 80%;
+    
+} */
+
+
+
+/* Traffic lights */
+.traffic-lights{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    
+}
+
+.traffic-light{
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: black;
+    padding: 5rem;
+   
+
+}
+
+.traffic-light > div{
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 255);
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.red-light{
+    background-color: rgb(233, 175, 175);
+    animation-name: RedLight;
+    animation-delay: 0ms;
+}
+
+.green-light{
+    background-color: rgb(176, 235, 176);
+    animation-name: GreenLight;
+    animation-delay: 5s;
+
+
+}
+
+.yellow-light{
+    background-color: rgb(223, 223, 132);
+    animation-name: YellowLight;
+    animation-delay: 10s;
+
+}
+
+@keyframes RedLight {
+    0%{
+        background-color: rgba(233, 175, 175);
+    }
+
+    32%{
+        background-color: rgb(211, 5, 5);
+    }
+
+    33%{
+        background-color: rgb(211, 5, 5);
+    }
+
+    100%{
+        background-color: rgba(233, 175, 175);
+    }
+    
+}
+
+
+@keyframes GreenLight {
+    0%{
+        background-color: rgb(176, 235, 176);
+    }
+
+    32%{
+        background-color: #00ff00;
+    }
+
+    33%{
+        background-color: #03fd03;
+    }
+
+    100%{
+        background-color: rgb(182, 245, 182);
+    }
+    
+}
+
+
+@keyframes YellowLight {
+    0%{
+        background-color: rgb(223, 223, 132);
+    }
+
+    32%{
+        background-color: #ffff00;
+    }
+
+    33%{
+        background-color: rgb(233, 233, 18);
+    }
+
+    100%{
+        background-color: rgb(223, 223, 132);
+    }
+    
+}
